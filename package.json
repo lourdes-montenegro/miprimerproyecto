@@ -1,0 +1,27 @@
+{
+  "name": "miprimerproyecto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/lourdes-montenegro/miprimerproyecto.git"
+  },
+  "keywords": [
+    "imagen",
+    "gráficos",
+    "estilos"
+  ],
+  "author": "Lourdes Montenegro <lourdesmontenegro017@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lourdes-montenegro/miprimerproyecto/issues"
+  },
+  "homepage": "https://github.com/lourdes-montenegro/miprimerproyecto#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
