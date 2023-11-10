@@ -7,21 +7,30 @@ body {
     padding: 0;
     font-size: 16px;
     font-family: 'Arial', sans-serif;
-    background-color: #ebebeb 
+    background-color: #ebebeb
 }
-header{
+
+header {
     background-color: #EAC926;
     font-weight: lighter;
-    
+
 }
-article img{ 
+
+article {
+    border-top: 1px solid #ebebeb;
+}
+
+article img {
     width: 20rem;
 }
+
 p {
     text-align: center;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     text-align: center;
 }
 
@@ -29,7 +38,8 @@ ul {
     list-style-type: none;
     padding: 0;
 }
-ul a{
+
+ul a {
     text-decoration: none;
     color: black;
     font-weight: lighter;
@@ -44,13 +54,14 @@ ul a{
     color: white;
     margin: 2% 44%;
     border-radius: 5px;
-  
+
 }
 
 .caja {
     margin: 20px;
     padding: 20px;
     text-align: center;
+
 }
 
 footer {
@@ -59,29 +70,40 @@ footer {
     justify-content: center;
     background-color: white;
 }
-footer i{
-font-size: 2em;
-margin-bottom: 10px;
 
-
-
+footer i {
+    font-size: 2em;
+    margin-bottom: 10px;
 }
-.contenedor01 {
+
+main {
+    width: 90%;
+}
+
+/* .contenedor01 {
     width: 90%;
     max-width: 700px;
     margin: 0 auto;
     padding: 20px;
     background-color: #EAC926;
-}
+} */
 
 .caja-hija {
     margin-top: 10px;
     padding: 20px;
     border-top: 1px solid #ebebeb;
+
 }
 
 .links {
     font-size: 16px;
     text-align: left;
     list-style-type: none;
+}
+
+.caja-madre {
+    display: flex;
+    flex-wrap: wrap;
+   
+
 }
