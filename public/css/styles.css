@@ -52,7 +52,7 @@ ul a {
     height: 50px;
     background-color: #1259c3;
     color: white;
-    margin: 2% 44%;
+    margin: 2% 48%;
     border-radius: 5px;
 
 }
@@ -63,7 +63,9 @@ ul a {
     text-align: center;
 
 }
-
+.logo-container{
+    
+}
 footer {
     text-align: center;
     padding: 10px;
@@ -80,13 +82,7 @@ main {
     width: 90%;
 }
 
-/* .contenedor01 {
-    width: 90%;
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #EAC926;
-} */
+
 
 .caja-hija {
     margin-top: 10px;
@@ -104,6 +100,4 @@ main {
 .caja-madre {
     display: flex;
     flex-wrap: wrap;
-   
-
 }
