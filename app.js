@@ -17,6 +17,6 @@ app.get('/', (req, res) => {
     res.sendFile(htmlPath) 
 
 })
-app.get('/create',(req, res) => 
-res.sendFile(path.join(__dirname, 'views', 'create.html'))
+app.get('/register',(req, res) => 
+res.sendFile(path.resolve(__dirname, 'views/register.html'))
 )
