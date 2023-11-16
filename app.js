@@ -28,4 +28,3 @@ res.sendFile(path.resolve(__dirname, './views/register.html'))
 // 
 // 
 
-const cartInfo = document.querySelector('')
