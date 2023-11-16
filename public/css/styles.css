@@ -20,9 +20,7 @@ header {
 
 }
 
-/* article {
-    border-bottom: 1px solid #ebebeb;
-} */
+
 .compra-en-cuotas{
     text-align: center;
     font-size: 16px;
@@ -33,23 +31,21 @@ article img {
 
 }
 
-/* p {
-    text-align: center;
-} */
 .banner {
     width: 100%;
 }
 
 .logo {
-    width: 50%
+    width: 50%;
 }
 
 h1,
 h2,
 h3 {
-
+    margin-top: 1rem;
     font-size: 24;
-
+margin-left: 1rem;
+color: gray;
 }
 
 ul {
@@ -70,7 +66,7 @@ ul a {
     height: 50px;
     background-color: #1259c3;
     color: white;
-    margin: 2% 48%;
+    margin: 2% 47%;
     border-radius: 5px;
 
 }
@@ -78,18 +74,14 @@ ul a {
 .caja {
     margin: 1rem;
     padding: 1rem;
-
-
 }
 
-/* .logo-container{
-    
-} */
 footer {
     text-align: center;
     padding: 10px;
     justify-content: center;
     background-color: white;
+    font-size: 12px;
 }
 
 footer i {
@@ -109,6 +101,8 @@ main {
     border-top: 1px solid #ebebeb;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     background-color: white;
+    margin-left: 1rem;
+    margin-right: 1rem;
 
 
 }
@@ -128,7 +122,7 @@ main {
 
 }
 
-@media (max-width: 767px) {
+@media (max-width: 769px) {
 
     .navbar-desktop,
     .links {
@@ -136,7 +130,7 @@ main {
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 361px) {
     .navbar-mobile {
         display: none;
     }
@@ -152,4 +146,27 @@ article p strong {
 article p span {
     font-size: 16px;
     margin-bottom: 2rem;
+}
+.descuento{
+    color: #39b54a;
+    margin-bottom: 0.5rem;
+    font-size: 16px;
+}
+.camion{
+    color: #39b54a;
+}
+.precio{
+    font-size: 18px;
+}
+article p {
+    font-size: 16px;
+}
+.copy {
+    text-align: left;
+}
+.busqueda{
+    display: flex;
+    flex-wrap: wrap;
+border-radius: 10px;
+
 }
