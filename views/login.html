@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Liebre - Tu Destino para Compras en Línea</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,100&display=swap');
+    </style>
+    <script src="https://kit.fontawesome.com/a7567a3fe8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+
+
+<body>
+    <header class="main-header">
+        <div class="main-header-top-bar">
+            <img src="/images/logo.svg" class="logo">
+            <form action="/buscar" method="get">
+                <label for="busqueda"></label>
+                <div class="busqueda"> <input type="search" id="busqueda" name="q"
+                        placeholder="Escribe tu búsqueda aquí" required>
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </form>
+            <h2 class="copy-header"><i class="fa-solid fa-hand-holding-dollar"></i>Compra en cuotas y sin tarjeta de
+                crédito</h2>
+        </div>
+        <a href="#" class="burger-menu">
+            <i class="fas fa-bars"></i>
+        </a>
+
+
+        <nav class="links">
+
+            <ul class="left-navbar">
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Tiendas oficiales</a></li>
+                <li><a href="#">Vender</a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
+            <ul class="right-navbar">
+                <li><a href="/register">Creá tu cuenta <i class="fa-regular fa-id-card"></i></a>
+                </li>
+                <li><a href="#">Ingresa <i class="fa-solid fa-right-to-bracket"></i></a></li>
+                <li><a href="#">Mis compras <i class="fa-sharp fa-solid fa-basket-shopping"></i></a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+
+    <div class="login">
+        <form action="/views/home.html" method="post">
+            <label for="username">Nombre de usuari@:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+    <footer>
+        <section class="caja">
+            <ul>
+                <li><i class="fas fa-credit-card" style="color: #1259c3;"></i>
+                    <h3>Pagá con tarjeta o en efectivo</h3>
+                    <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago.
+                        ¡Y
+                        siempre es seguro!</p>
+                </li>
+                <li><i class="fas fa-truck-moving" style="color: #1259c3;"></i>
+                    <h3>Envío gratis desde $2.500</h3>
+                    <p>Solo por estar registrado/a en Mercado Liebre tenés envíos gratis en miles de productos. Es
+                        un
+                        beneficio de Mercado Puntos.</p>
+                </li>
+                <li><i class="fas fa-user-shield" style="color: #1259c3;"></i>
+                    <h3>Seguridad, de principio a fin</h3>
+                    <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer, porque estás
+                        siempre
+                        protegido/a.</p>
+                </li>
+            </ul>
+        </section>
+        <div class="copy">
+            <p>&copy;1999-2023 MercadoLiebre S.R.L.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,4 +1,16 @@
-* {
+/* .login body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  } */
+
+
+  * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -17,7 +29,6 @@ body {
     background-color: #EAC926;
     padding: 15px;
     font-weight: lighter;
-    
 
 }
 
@@ -131,37 +142,52 @@ body {
 
 
 
-article img {
-    width: 20rem;
-    border-bottom: 1px solid #ebebeb;
 
-}
+.login {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    align-content: center;
+flex-wrap: wrap;
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    margin: 2rem auto 2rem auto;
+    position: relative;
 
-.banner {
+
+  }
+
+ .login label {
+    display: block;
+    margin-bottom: 8px;
+
+  }
+
+ .login input {
     width: 100%;
+    padding: 8px;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    border-radius: 5px;
+    height: 100%;
+  }
 
-}
+  .login input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
 
+  }
 
+  .login input[type="submit"]:hover {
+    background-color: #45a049;
+  }
 
-ul {
-    text-decoration: none;
-}
-
-.caja {
-    margin: 1rem;
-    padding: 1rem;
-}
-ul{
-    list-style-type: none;
-    padding: 0;
-   
-}
-ul li {
-    list-style-type: none;
-    padding: 0;
-    
-}
 footer {
     text-align: center;
     padding: 10px;
@@ -173,85 +199,7 @@ footer {
 footer i {
     font-size: 2em;
     margin-bottom: 10px;
-    
 }
-
-main {
-    width: 90%;
+ul {
+    list-style: none;
 }
-
-
-.caja-hija {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    padding-left: 1rem;
-    border-top: 1px solid #ebebeb;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    background-color: white;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-
-
-}
-
-
-
-.caja-madre {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    background-color: #ebebeb;
-    border-bottom: 1px solid #ebebeb;
-
-}
-
-
-
-
-article p strong {
-    font-size: 18px;
-    margin-bottom: 2rem;
-
-}
-
-article p span {
-    font-size: 16px;
-    margin-bottom: 2rem;
-}
-
-.descuento {
-    color: #39b54a;
-    margin-bottom: 0.5rem;
-    font-size: 16px;
-}
-
-.camion {
-    color: #39b54a;
-}
-
-.precio {
-    font-size: 18px;
-}
-
-article p {
-    font-size: 16px;
-}
-
-.copy {
-    text-align: left;
-}
-
-.busqueda {
-    display: flex;
-    flex-wrap: wrap;
-    border-radius: 10px;
-    text-align: left;
-
-
-}
-
-h2 {
-    text-align: center;
-    color: #333;
-}
-

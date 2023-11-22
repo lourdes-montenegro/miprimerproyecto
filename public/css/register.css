@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+
+
 body {
     margin: 0;
     padding: 0;
@@ -11,13 +13,13 @@ body {
     font-family: 'Roboto';
     background-color: #ebebeb;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    
 }
 
 .main-header {
     background-color: #EAC926;
     padding: 15px;
     font-weight: lighter;
-    
 
 }
 
@@ -32,6 +34,8 @@ body {
     font-size: 17px;
     margin: auto;
 }
+
+
 
 .logo {
     width: 200px;
@@ -130,128 +134,64 @@ body {
 }
 
 
-
-article img {
-    width: 20rem;
-    border-bottom: 1px solid #ebebeb;
-
-}
-
-.banner {
-    width: 100%;
-
-}
-
-
-
-ul {
-    text-decoration: none;
-}
-
-.caja {
-    margin: 1rem;
-    padding: 1rem;
-}
-ul{
-    list-style-type: none;
-    padding: 0;
-   
-}
-ul li {
-    list-style-type: none;
-    padding: 0;
-    
-}
 footer {
     text-align: center;
     padding: 10px;
     justify-content: center;
     background-color: white;
     font-size: 12px;
+    text-decoration: none;
 }
-
+ul li {
+    text-decoration: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
 footer i {
     font-size: 2em;
     margin-bottom: 10px;
+text-decoration: none;
     
 }
 
 main {
     width: 90%;
 }
-
-
-.caja-hija {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    padding-left: 1rem;
-    border-top: 1px solid #ebebeb;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    background-color: white;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-
-
-}
-
-
-
-.caja-madre {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    background-color: #ebebeb;
-    border-bottom: 1px solid #ebebeb;
-
-}
-
-
-
-
-article p strong {
-    font-size: 18px;
-    margin-bottom: 2rem;
-
-}
-
-article p span {
-    font-size: 16px;
-    margin-bottom: 2rem;
-}
-
-.descuento {
-    color: #39b54a;
-    margin-bottom: 0.5rem;
-    font-size: 16px;
-}
-
-.camion {
-    color: #39b54a;
-}
-
-.precio {
-    font-size: 18px;
-}
-
-article p {
-    font-size: 16px;
-}
-
-.copy {
-    text-align: left;
-}
-
-.busqueda {
-    display: flex;
-    flex-wrap: wrap;
-    border-radius: 10px;
-    text-align: left;
-
-
-}
-
-h2 {
+.form {
+    width: 80%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    color: #333;
 }
 
+.form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"], input[type="reset"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #45a049;
+}

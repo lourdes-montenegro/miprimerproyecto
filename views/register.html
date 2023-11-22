@@ -9,7 +9,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,100&display=swap');
   </style>
   <script src="https://kit.fontawesome.com/a7567a3fe8.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/register.css">
 </head>
 
 <body>
@@ -51,12 +51,10 @@
 
   <h2>Formulario de Usuario</h2>
   <div class="form">
-    <form action="pagina_principal.html" method="post">
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" required>
+    <form action="home.html" method="post">
 
-      <label for="apellido">Apellido:</label>
-      <input type="text" id="apellido" name="apellido" required>
+      <label for="nombre">Nombre y Apellido:</label>
+      <input type="text" id="nombre" name="nombre" required>
 
       <label for="usuario">Nombre de usuari@:</label>
       <input type="text" id="usuario" name="usuario" required>
@@ -70,52 +68,43 @@
       <label for="domicilio">Domicilio:</label>
       <input type="text" id="domicilio" name="domicilio" required>
 
-      <fieldset>
-        <legend>Perfil del Usuario:</legend>
-        <div>
-          <input type="radio" id="comprar" name="perfilUsuario" value="comprar" required>
-          <label for="comprar">Comprar</label>
-        </div>
-        <div>
-          <input type="radio" id="vender" name="perfilUsuario" value="vender" required>
-          <label for="vender">Vender</label>
-        </div>
-      </fieldset>
+      <label for="perfil">Perfil del Usuario:</label>
+      <select id="perfil" name="perfil" required>
+          <option value="comprar">Comprar</option>
+          <option value="vender">Vender</option>
+      </select>
 
       <label>Categorías de Interés:</label>
       <div>
-        <input type="checkbox" id="electro" name="categoriasInteres[]" value="electro">
-        <label for="electro">Electro</label>
-      </div>
-      <div>
-        <input type="checkbox" id="moda" name="categoriasInteres[]" value="moda">
-        <label for="moda">Moda</label>
-      </div>
-      <div>
-        <input type="checkbox" id="hogar" name="categoriasInteres[]" value="hogar">
-        <label for="hogar">Hogar</label>
-      </div>
-      <div>
-        <input type="checkbox" id="jugueteria" name="categoriasInteres[]" value="jugueteria">
-        <label for="jugueteria">Juguetería</label>
-      </div>
-      <div>
-        <input type="checkbox" id="vidaSana" name="categoriasInteres[]" value="vidaSana">
-        <label for="vidaSana">Vida Sana</label>
+          <input type="checkbox" id="electro" name="categorias" value="electro">
+          <label for="electro">Electro</label>
+
+          <input type="checkbox" id="moda" name="categorias" value="moda">
+          <label for="moda">Moda</label>
+
+          <input type="checkbox" id="hogar" name="categorias" value="hogar">
+          <label for="hogar">Hogar</label>
+
+          <input type="checkbox" id="jugueteria" name="categorias" value="jugueteria">
+          <label for="jugueteria">Juguetería</label>
+
+          <input type="checkbox" id="vidaSana" name="categorias" value="vidaSana">
+          <label for="vidaSana">Vida Sana</label>
       </div>
 
-      <label for="fotoUsuario">Foto de Usuario:</label>
-      <input type="file" id="fotoUsuario" name="fotoUsuario" accept="image/*">
+      <label for="foto">Foto de Usuario:</label>
+      <input type="file" id="foto" name="foto" accept="image/*">
 
-      <label for="contrasena">Contraseña:</label>
-      <input type="password" id="contrasena" name="contrasena" required>
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" name="password" required>
 
-      <label for="confirmarContrasena">Confirmar Contraseña:</label>
-      <input type="password" id="confirmarContrasena" name="confirmarContrasena" required>
+      <label for="confirmPassword">Confirmar Contraseña:</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" required>
 
-      <button type="submit">Enviar</button>
-      <button type="reset">Borrar Datos</button>
-    </form>
+      <input type="submit" value="Enviar">
+      <input type="reset" value="Borrar Datos">
+
+  </form>
   </div>
   <footer>
     <section class="caja">
