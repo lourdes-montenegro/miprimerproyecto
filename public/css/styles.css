@@ -3,7 +3,23 @@
     padding: 0px;
     box-sizing: border-box;
 }
+.comprar-btn {
+    background-color: #007bff;
+    color: #fff; 
+    border: none; 
+    padding: 8px 16px; 
+    cursor: pointer; 
+    border-radius: 4px; 
+    transition: background-color 0.3s ease; 
+  
 
+    margin-top: 10px;
+  }
+  
+  .comprar-btn:hover {
+    background-color: #0056b3;
+  }
+  
 body {
     margin: 0;
     padding: 0;

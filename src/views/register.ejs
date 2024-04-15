@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- head -->
+<%- include('./partials/head') %>
+<body>
+<!-- header -->       
+<%- include('./partials/header') %>
+
+
+  <h2>Formulario de Usuario</h2>
+  <div class="form">
+    <form action="home.html" method="post">
+
+      <label for="nombre">Nombre y Apellido:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="usuario">Nombre de usuari@:</label>
+      <input type="text" id="usuario" name="usuario" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+      <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+
+      <label for="domicilio">Domicilio:</label>
+      <input type="text" id="domicilio" name="domicilio" required>
+
+      <label for="perfil">Perfil del Usuario:</label>
+      <select id="perfil" name="perfil" required>
+          <option value="comprar">Comprar</option>
+          <option value="vender">Vender</option>
+      </select>
+
+      <label>Categorías de Interés:</label>
+      <div>
+          <input type="checkbox" id="electro" name="categorias" value="electro">
+          <label for="electro">Electro</label>
+
+          <input type="checkbox" id="moda" name="categorias" value="moda">
+          <label for="moda">Moda</label>
+
+          <input type="checkbox" id="hogar" name="categorias" value="hogar">
+          <label for="hogar">Hogar</label>
+
+          <input type="checkbox" id="jugueteria" name="categorias" value="jugueteria">
+          <label for="jugueteria">Juguetería</label>
+
+          <input type="checkbox" id="vidaSana" name="categorias" value="vidaSana">
+          <label for="vidaSana">Vida Sana</label>
+      </div>
+
+      <label for="foto">Foto de Usuario:</label>
+      <input type="file" id="foto" name="foto" accept="image/*">
+
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" name="password" required>
+
+      <label for="confirmPassword">Confirmar Contraseña:</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+      <input type="submit" value="Enviar">
+      <input type="reset" value="Borrar Datos">
+
+  </form>
+  </div>
+  <footer>
+    <section class="caja">
+      <ul>
+        <li><i class="fas fa-credit-card" style="color: #1259c3;"></i>
+          <h3>Pagá con tarjeta o en efectivo</h3>
+          <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago.
+            ¡Y
+            siempre es seguro!</p>
+        </li>
+        <li><i class="fas fa-truck-moving" style="color: #1259c3;"></i>
+          <h3>Envío gratis desde $2.500</h3>
+          <p>Solo por estar registrado/a en Mercado Liebre tenés envíos gratis en miles de productos. Es
+            un
+            beneficio de Mercado Puntos.</p>
+        </li>
+        <li><i class="fas fa-user-shield" style="color: #1259c3;"></i>
+          <h3>Seguridad, de principio a fin</h3>
+          <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer, porque estás
+            siempre
+            protegido/a.</p>
+        </li>
+      </ul>
+    </section>
+    <div class="copy">
+      <p>&copy;1999-2023 MercadoLiebre S.R.L.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
