@@ -26,6 +26,7 @@ body {
     font-size: 12px;
     font-family: 'Roboto';
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    
 }
 
 .main-header {
@@ -264,6 +265,49 @@ h2 {
     font-size: 2rem;
 }
 
-p {
-    color: white;
+
+
+.form-group {
+    margin-bottom: 15px;
+    
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    text-justify: distribute;
+    font-size: 20px;
+
+}
+
+input {
+    width: 50%;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    justify-content: center;
+   justify-self: center;
+
+   
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+.caja-form {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    background-color: #665e5e;
+    margin-right: 0.5rem;
+    text-align: center;
 }

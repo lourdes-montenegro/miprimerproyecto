@@ -1,0 +1,21 @@
+[
+    {
+      "nombre": "Helado de chocolate",
+      "precio": 2.5,
+      "descripcion": "",
+      "imagen": "/public/images/chocolate.jpg"
+    },
+    {
+      "nombre": "Helado de dulce de leche",
+      "precio": 3,
+      "descripcion": "",
+      "imagen": "/public/images/dulcedeleche-granizado.jpg"
+    },
+    {
+      "nombre": "Helado crema cookie",
+      "precio": 2.8,
+      "descripcion": "",
+      "imagen": "/public/images/crema-cookie.jpg.jpg"
+    }
+  ]
+  

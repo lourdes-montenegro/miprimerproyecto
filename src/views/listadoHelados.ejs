@@ -1,0 +1,42 @@
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+       @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,100&display=swap');
+   </style>
+   <script src="https://kit.fontawesome.com/a7567a3fe8.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="/public/css/styles.css">
+</head>
+<body>
+<!-- header -->       
+<%- include('./partials/header') %>
+<h2>Creá tu helado favorito!</h2>
+<div class="caja-form">
+<div class="form">
+  <form id="productForm">
+    <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+    </div>
+    <div class="form-group">
+        <label for="sabor">Sabor:</label>
+        <input type="text" id="sabor" name="sabor" required>
+    </div>
+    <div class="form-group">
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" name="precio" step="0.01" min="0" required>
+    </div>
+    <div class="form-group">
+        <label for="stock">Stock:</label>
+        <input type="number" id="stock" name="stock" min="0" required>
+    </div>
+    <div class="form-group">
+        <label for="imagen">Imagen:</label>
+        <input type="file" id="imagen" name="imagen" accept="image/*" required>
+    </div>
+
+    <button type="submit">Guardar Producto</button>
+</form>
+</div>
+</body>
+<%- include('./partials/footer') %>

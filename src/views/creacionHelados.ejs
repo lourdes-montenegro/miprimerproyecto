@@ -1,0 +1,34 @@
+<!-- head -->
+<%- include('./partials/head') %>
+<%- include('./partials/header') %>
+
+<h1>Creá el helado que mas te guste</h1>
+<form action="/helados/crear" method="post">
+    <div>
+        <label for="">sabor</label>
+        <input type="text" name="sabor">
+        <select name="helado" id="">
+            <% for (let i = 0; i < helados.length; i++) { %>
+                
+            
+            <option value="<%=helados[i].id%>">
+                <%helados[i].name%>
+                </option>
+       <% } %>
+        </select>
+    </div>
+    <div>
+        <label for="">precio</label>
+        <input type="text" name="precio">
+    </div>
+    <div>
+        <label for="">autor/a</label>
+        <input type="text" name="autor">
+    </div>
+    <div>
+        <label for="">cantidad disponible</label>
+        <input type="text" name="cantidad">
+    </div>
+
+</form>
+<%- include('./partials/footer') %>
