@@ -1,5 +1,5 @@
 const express = require('express');
-const heladosController = require('../controllers/heladoControllers');
+const heladosController = require('../../controllers/API/apiHeladoControllers');
 
 const router = express.Router();
 

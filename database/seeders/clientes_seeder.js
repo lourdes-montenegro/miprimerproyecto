@@ -5,7 +5,7 @@ const Cliente = models.Cliente;
 
 module.exports = {
   up: async () => {
-    await Cliente.createdAt([
+    await Cliente.bulkInsert([
       {
         name: 'Juan Pérez',
         email: 'juan@example.com'
@@ -21,4 +21,3 @@ module.exports = {
     await Cliente.destroy({ where: {} });
   }
 };
-

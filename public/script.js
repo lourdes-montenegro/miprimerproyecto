@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  fetch('http://localhost:3000/productos') // Ruta correcta de la API para productos
+  fetch('http://localhost:3000/api/helados') // Ruta correcta de la API para productos
     .then(response => response.json())
     .then(data => {
       const productosContainer = document.getElementById('productos-container');

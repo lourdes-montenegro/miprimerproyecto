@@ -1,12 +1,12 @@
-module.exports = function (sequelize, dataTypes) {
+module.exports = function (sequelize, DataTypes) {
     let alias = "Helado";
     let cols = {
-        id_producto: {
+        id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        name: {
+        nombre: {
             type: DataTypes.STRING
         },
         precio: {
@@ -15,7 +15,7 @@ module.exports = function (sequelize, dataTypes) {
         descripcion: DataTypes.STRING
     }
     let config = {
-        tableName: "productos",
+        tableName: "helados",
         timestamps: false
     }
     let Helado = sequelize.define(alias, cols, config);

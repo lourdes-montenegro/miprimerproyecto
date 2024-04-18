@@ -10,12 +10,11 @@
 <body>
 <!-- header -->       
 <%- include('./partials/header') %>
-<h1>Listado de helados</h1>
 
-<ul>
-  <% helados.forEach(function(helado) { %>
-    <li><%= helado.name %> - <%= helado.precio %> </li>
-  <% }); %>
-</ul>
+<h1>Detalle del helado</h1>
+
+<h2><%= helado.name %></h2>
+<p>Precio: <%= helado.precio %></p>
+
 </body>
-<%- include('./partials/footer') %>
+<%- include('./partials/footer') %></meta>

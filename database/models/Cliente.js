@@ -1,21 +1,22 @@
-module.exports = function (sequelize, dataTypes) {
+module.exports = function (sequelize, DataTypes) {
     let alias = "Cliente";
     let cols = {
         id: {
-             type: DataTypes.INTEGER,
-             primaryKey: true
-        } ,
-        name: {
-            type:DataTypes.STRING
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true // Agregamos autoIncrement para que se incremente automáticamente
+        },
+       nombre: {
+            type: DataTypes.STRING
         },
         email: {
-            type:DataTypes.STRING
+            type: DataTypes.STRING
         }
-    }
+    };
     let config = {
         tableName: "clientes",
         timestamps: false
-    }
+    };
     let Cliente = sequelize.define(alias, cols, config);
 
     Cliente.associate = function(models) {
@@ -26,5 +27,5 @@ module.exports = function (sequelize, dataTypes) {
         });
     };
     
-    return Cliente
-}
+    return Cliente;
+};

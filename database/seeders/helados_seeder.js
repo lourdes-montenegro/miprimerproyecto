@@ -1,10 +1,9 @@
-const { Helado } = require('../models/Helados'); // Importa el modelo Helado
+// const { Helado } = require('../models/Helados'); 
 
-// Función para seedear la base de datos con helados
-async function seedHelados() {
-    try {
-        // Array con los datos de los 10 sabores de helados
-        const heladosData = [
+module.exports = {
+    up: async (queryInterface, Sequelize) => {
+        await queryInterface.bulkInsert('helados',
+         [
             { name: 'Chocolate', precio: 2.5, descripcion: 'Delicioso helado de chocolate' },
             { name: 'Vainilla', precio: 2.0, descripcion: 'Clásico helado de vainilla' },
             { name: 'Fresa', precio: 3.0, descripcion: 'Refrescante helado de fresa' },
@@ -15,16 +14,11 @@ async function seedHelados() {
             { name: 'Coco', precio: 2.7, descripcion: 'Tropical helado de coco' },
             { name: 'Almendra', precio: 3.2, descripcion: 'Exquisito helado de almendra' },
             { name: 'Pistacho', precio: 3.0, descripcion: 'Rico helado de pistacho' }
-        ];
+        ], {});
+    },
 
-        // Crear los helados en la base de datos
-        await Helado.bulkCreate(heladosData);
+        down: async (queryInterface, Sequelize) => {
+            await queryInterface.bulkDelete('helados', null, {});
+        }
+    };
 
-        console.log('Seeding completado. Helados agregados correctamente.');
-    } catch (error) {
-        console.error('Error en el seeding:', error);
-    }
-}
-
-// Llamar a la función para seedear los helados
-seedHelados();

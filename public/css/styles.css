@@ -311,3 +311,24 @@ button:hover {
     margin-right: 0.5rem;
     text-align: center;
 }
+.boton-volver {
+    display: block;
+    width: 120px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 20px auto;
+  }
+
+  /* Estilos para el input */
+  .input-volver {
+    display: block;
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px auto;
+  }

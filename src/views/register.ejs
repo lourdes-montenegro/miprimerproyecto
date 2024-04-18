@@ -8,16 +8,16 @@
       @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,100&display=swap');
   </style>
   <script src="https://kit.fontawesome.com/a7567a3fe8.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/css/register.css">
+  <link rel="stylesheet" href="../../public/css/styles.css">
 </head>
 <body>
 <!-- header -->       
 <%- include('./partials/header') %>
 
-
   <h2>Creá tu helado favorito!</h2>
   <div class="form">
-    <form id="productForm">
+    <form id="productForm" action="/guardarProducto" method="POST">
+
       <div class="form-group">
           <label for="nombre">Nombre:</label>
           <input type="text" id="nombre" name="nombre" required>
@@ -36,34 +36,12 @@
       </div>
       <button type="submit">Guardar Producto</button>
   </form>
+  
+<a href="/" class="boton-volver">Volver al Inicio</a>
+
   </div>
-  <footer>
-    <section class="caja">
-      <ul>
-        <li><i class="fas fa-credit-card" style="color: #1259c3;"></i>
-          <h3>Pagá con tarjeta o en efectivo</h3>
-          <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago.
-            ¡Y
-            siempre es seguro!</p>
-        </li>
-        <li><i class="fas fa-truck-moving" style="color: #1259c3;"></i>
-          <h3>Envío gratis desde $2.500</h3>
-          <p>Solo por estar registrado/a en Mercado Liebre tenés envíos gratis en miles de productos. Es
-            un
-            beneficio de Mercado Puntos.</p>
-        </li>
-        <li><i class="fas fa-user-shield" style="color: #1259c3;"></i>
-          <h3>Seguridad, de principio a fin</h3>
-          <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer, porque estás
-            siempre
-            protegido/a.</p>
-        </li>
-      </ul>
-    </section>
-    <div class="copy">
-      <p>&copy;1999-2023 MercadoLiebre S.R.L.</p>
-    </div>
-  </footer>
+  
+<%- include('./partials/footer') %></meta>
 </body>
 
 </html>
