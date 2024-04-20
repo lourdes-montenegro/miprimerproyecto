@@ -16,15 +16,10 @@
 
   <h2>Creá tu helado favorito!</h2>
   <div class="form">
-    <form id="productForm" action="/guardarProducto" method="POST">
-
+    <form id="productForm" action="/guardarProducto" method="POST" enctype="multipart/form-data">
       <div class="form-group">
-          <label for="nombre">Nombre:</label>
+          <label for="nombre">Sabor:</label>
           <input type="text" id="nombre" name="nombre" required>
-      </div>
-      <div class="form-group">
-          <label for="sabor">Sabor:</label>
-          <input type="text" id="sabor" name="sabor" required>
       </div>
       <div class="form-group">
           <label for="precio">Precio:</label>
@@ -34,8 +29,15 @@
           <label for="stock">Stock:</label>
           <input type="number" id="stock" name="stock" min="0" required>
       </div>
+      <div class="form-group">
+        <input type="file" name="imagen" id="imagen" class="form-control d-none" onchange="updateFileName(this)">
+
+          <button type="button" class="btn-image text-dark" id="btn-image" onclick="document.getElementById('image').click()">Seleccionar una imagen</button>
+          <span id="file-selected"></span>
+      </div>
       <button type="submit">Guardar Producto</button>
   </form>
+  
   
 <a href="/" class="boton-volver">Volver al Inicio</a>
 

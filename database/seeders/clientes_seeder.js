@@ -1,23 +1,24 @@
 
-'use strict';
-const models = require('../models/Cliente');
-const Cliente = models.Cliente;
-
 module.exports = {
-  up: async () => {
-    await Cliente.bulkInsert([
+  up: async (queryInterface, Sequelize) => {
+
+    await queryInterface.bulkInsert('Clientes', [
       {
         name: 'Juan Pérez',
-        email: 'juan@example.com'
+        email: 'juan@example.com',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         name: 'María Rodríguez',
-        email: 'maria@example.com'
+        email: 'maria@example.com',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
-    ]);
+    ], {});
   },
 
-  down: async () => {
-    await Cliente.destroy({ where: {} });
+  down: async (queryInterface, Sequelize) => {
+    await queryInterface.bulkDelete('Clientes', null, {});
   }
 };

@@ -46,6 +46,7 @@
 
 
     <img class="banner" src="/public/images/portada.jpg" alt="">
+ 
     <h2>Sabores</h2>
     <div class="caja-madre">
 
@@ -54,7 +55,6 @@
                 <img src="/public/images/chocolate.jpg" alt="" >
                
                 <div class="precio"> <p><strong>$2.500</strong> </div>
-                    <div class="descuento">  <span>5% OFF</span></p></div>
                     <p>Chocolate</p>
                     <button class="comprar-btn">Comprar</button>
                     <button class="editar"> <a href="/src/views/listadoHelados.ejs"></a> Editar</button>
@@ -65,7 +65,6 @@
             <article>
                 <img src="/public/images/crema-cookie.jpg" alt="">
                 <div class="precio">  <p><strong>$2.000</strong> </div>
-                    <div class="descuento">  <span>20% OFF</span></p></div>
                 <p>Crema Cookie</p>
                 <button class="comprar-btn">Comprar</button>
                 <button class="editar">Editar</button>
@@ -75,7 +74,6 @@
             <article>
                 <img src="/public/images/dulcedeleche-granizado.jpg" alt="">
                 <div class="precio"> <p><strong>$2.500</strong> </div>
-                    <div class="descuento">  <span>10% OFF</span></p></div>
                 <p>Dulce de leche granizado</p>
                 <button class="comprar-btn">Comprar</button>
                 <button class="comprar-btn">Editar</button>
@@ -86,7 +84,6 @@
             <article>
                 <img src="/public/images/tiramisu.jpg" alt="">
                 <div class="precio"> <p><strong>$2.500</strong> </div>
-                    <div class="descuento"> <span>5% OFF</span></p></div>
                 <p>Tiramisu</p>
                 <button class="comprar-btn">Comprar</button>
                 <button class="comprar-btn">Editar</button>
@@ -96,25 +93,53 @@
             <article>
                 <img src="/public/images/marroc.jpg" alt="">
                 <div class="precio"> <p><strong>$2.500</strong> </div>
-                    <div class="descuento"> <span>5% OFF</span></p></div>
                 <p>Marroc</p>
                 <button class="comprar-btn">Comprar</button>
                 <button class="comprar-btn">Editar</button>
             </article>
         </div>
+
         <div class="caja-hija">
             <article>
                 
                 <img src="/public/images/cucurucho.jpg" alt="">
                 <div class="precio"> <p><strong>$2.500</strong> </div>
-                    <div class="descuento"> <span>5% OFF</span></p></div>
                 <p>Cucuruchos</p>
                 <button class="comprar-btn">Comprar</button>
                 <button class="comprar-btn">Editar</button>
             </article>
         </div>
-    </div>
 
+
+        <% var defaultImage = "/public/images/default.jpg"; %>
+        <% var chunkSize = 1; // Define el tamaño del grupo de productos por div %>
+        <% var productosCount = productos.length; %>
+        <% var chunksCount = Math.ceil(productosCount / chunkSize); %>
+        <% for (var i = 0; i < chunksCount; i++) { %>
+            <div class="caja-hija">
+                <% var startIndex = i * chunkSize; %>
+                <% var endIndex = Math.min(startIndex + chunkSize, productosCount); %>
+                <% for (var j = startIndex; j < endIndex; j++) { %>
+                    <% var producto = productos[j]; %>
+                    <article class="producto">
+                        <img src="<%= producto.imagen ? '/public/images/' + producto.imagen : defaultImage %>" alt="<%= producto.nombre %>">
+                        <div class="precio">
+                            <p><strong>$<%= producto.precio %></strong></p>
+                            <% if (producto.descuento) { %>
+                                <div class="descuento">
+                                    <span><%= producto.descuento %> OFF</span>
+                                </div>
+                            <% } %>
+                        </div>
+                        <p><%= producto.nombre %></p>
+                        <button class="comprar-btn">Comprar</button>
+
+                        <button><a href="/editProduct">Editar</a></button>
+                    </article>
+                <% } %>
+            </div>
+        <% } %>
+        
     </section>
   </div>
 

@@ -1,11 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <style>
-       @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,100&display=swap');
-   </style>
-   <script src="https://kit.fontawesome.com/a7567a3fe8.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,100&display=swap">
+   <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css">
+   <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css">
+   <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css">
    <link rel="stylesheet" href="/public/css/styles.css">
+   <title>Listado de helados</title>
 </head>
 <body>
 <!-- header -->       
@@ -14,8 +17,9 @@
 
 <ul>
   <% helados.forEach(function(helado) { %>
-    <li><%= helado.name %> - <%= helado.precio %> </li>
+    <li><%= helado.nombre %> - <%= helado.precio %> </li>
   <% }); %>
 </ul>
-</body>
 <%- include('./partials/footer') %>
+</body>
+</html>

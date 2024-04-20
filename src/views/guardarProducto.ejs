@@ -13,9 +13,15 @@
                 <h2><%= helado.nombre %></h2>
                 <p>Precio: $<%= helado.precio.toFixed(2) %></p>
                 <p><%= helado.descripcion %></p>
-                <img src="<%= helado.imagen %>" alt="<%= helado.nombre %>">
+                <% if (helado.imagen) { %>
+                    <img src="<%= helado.imagen %>" alt="<%= helado.nombre %>">
+                <% } else { %>
+                    <!-- Aquí puedes poner la ruta de la imagen por defecto -->
+                    <img src="/public/images/default.jpg" alt="Imagen por defecto">
+                <% } %>
             </li>
         <% }); %>
     </ul>
+    
 </body>
 </html>

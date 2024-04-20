@@ -1,4 +1,3 @@
-// const { Helado } = require('../models/Helados'); 
 
 module.exports = {
     up: async (queryInterface, Sequelize) => {

@@ -12,8 +12,15 @@ module.exports = function (sequelize, DataTypes) {
         precio: {
             type: DataTypes.DECIMAL
         },
-        descripcion: DataTypes.STRING
+        descripcion:{ 
+            type:DataTypes.STRING
+        },
+        imagen: {
+            type: DataTypes.BLOB,
+            allowNull: false
+        }
     }
+
     let config = {
         tableName: "helados",
         timestamps: false
@@ -27,5 +34,7 @@ module.exports = function (sequelize, DataTypes) {
             timestamps: false
         })
     }
+
+    
     return Helado
 }
