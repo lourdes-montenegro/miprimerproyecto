@@ -1,7 +1,7 @@
 let db = require('../database/models');
 
 let heladoControllers = {
-    crear: function (heladoData) {
+    create: function (heladoData) {
 		let allHelados = this.findAll();
 		let newHelado = {
 			id: this.generateId(),

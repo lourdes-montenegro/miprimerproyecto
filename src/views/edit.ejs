@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,100&display=swap');
+  </style>
+  <script src="https://kit.fontawesome.com/a7567a3fe8.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../../css/styles.css">
+</head>
+
+<body>
+  <!-- header -->
+  <%- include('./partials/header') %>
+
+  <h2>Edita</h2>
+  <div class="form">
+
+    <form action="/update" method="POST">
+      <input type="hidden" id="id" name="id" value="<%= helado.id %>">
+      <div class="form-group">
+        <label for="nombre">Sabor:</label>
+        <input type="text" id="nombre" name="nombre" value="<%= helado.nombre %>" required>
+      </div>
+      <div class="form-group">
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" name="precio" step="0.01" min="0" value="<%= helado.precio %>" required>
+      </div>
+      <div class="form-group">
+        <label for="stock">Stock:</label>
+        <input type="number" id="stock" name="stock" min="0" value="<%= helado.stock %>" required>
+      </div>
+      <div class="form-group">
+        <input type="file" name="imagen" id="imagen" class="form-control d-none" onchange="updateFileName(this)">
+        <input type="button" class="btn-image text-dark" id="btn-image" onclick="document.getElementById('imagen').click()">
+      </div>
+      <button type="submit">Guardar Cambios</button>
+    </form>
+
+    <a href="/" class="boton-volver">Volver al Inicio</a>
+  </div>
+
+  <%- include('./partials/footer') %>
+</body>
+
+</html>

@@ -8,15 +8,16 @@
       @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,100&display=swap');
   </style>
   <script src="https://kit.fontawesome.com/a7567a3fe8.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="../../public/css/styles.css">
+  <link rel="stylesheet" href="../../css/styles.css">
 </head>
+
 <body>
-<!-- header -->       
-<%- include('./partials/header') %>
+  <!-- header -->       
+  <%- include('./partials/header') %>
 
   <h2>Creá tu helado favorito!</h2>
   <div class="form">
-    <form id="productForm" action="/guardarProducto" method="POST" enctype="multipart/form-data">
+    <form action="/save" method="POST">
       <div class="form-group">
           <label for="nombre">Sabor:</label>
           <input type="text" id="nombre" name="nombre" required>
@@ -31,19 +32,15 @@
       </div>
       <div class="form-group">
         <input type="file" name="imagen" id="imagen" class="form-control d-none" onchange="updateFileName(this)">
-
-          <button type="button" class="btn-image text-dark" id="btn-image" onclick="document.getElementById('image').click()">Seleccionar una imagen</button>
-          <span id="file-selected"></span>
+        <input type="button" class="btn-image text-dark" id="btn-image" onclick="document.getElementById('imagen').click()">
       </div>
       <button type="submit">Guardar Producto</button>
-  </form>
-  
-  
-<a href="/" class="boton-volver">Volver al Inicio</a>
+    </form>
 
+    <a href="/" class="boton-volver">Volver al Inicio</a>
   </div>
-  
-<%- include('./partials/footer') %></meta>
+
+  <%- include('./partials/footer') %>
 </body>
 
 </html>

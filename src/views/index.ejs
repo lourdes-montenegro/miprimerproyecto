@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard Heladería</title>
-  <link rel="stylesheet" href="/public/css/styles.css">
+  <link rel="stylesheet" href="../../css/styles.css">
 </head>
 <body>
     <header class="main-header">
@@ -28,13 +28,12 @@
                     <li><a href="#">Ayuda</a></li>
                 </ul>
                 <ul class="right-navbar">
-                    <li><a href="/register">Creá tu helado<i class="fa-regular fa-id-card"></i></a>
+                    <li><a href="/create"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAFZJREFUSEtjZKAxYKSx+QyjFhAMYVKD6D/URKL1Ea0QavCoBQTjbOgEEcylBL2EpgAj0eBKRTS3AJfLh04cjPoAHgKDriwiNV+M1miEQ4zUSCZsIpoKAFy0DhnDOA3uAAAAAElFTkSuQmCC"/>Creá tu helado</a>
                     </li>
                     <li><a href="/login">Ingresa <i class="fa-solid fa-right-to-bracket"></i></a></li>
                     <li><a href="/helados">Mis compras <i class="fa-sharp fa-solid fa-basket-shopping"></i></a></li>
                     <li><a href="/carrito" id="carrito-link">Carrito <span id="carrito-count">0</span></a></li>
                     <a href="/listado-helados">Editar</a>
-                    <!-- Lista de productos en el carrito -->
                     <ul id="lista-carrito"></ul>
                 </ul>
         </nav>
@@ -45,25 +44,34 @@
   <div id="helados-container">
 
 
-    <img class="banner" src="/public/images/portada.jpg" alt="">
+    <img class="banner" src="../../images/portada.jpg" alt="">
  
     <h2>Sabores</h2>
     <div class="caja-madre">
 
         <div class="caja-hija">
-            <article>
-                <img src="/public/images/chocolate.jpg" alt="" >
-               
-                <div class="precio"> <p><strong>$2.500</strong> </div>
+
+                <article>
+                    <img src="../../images/chocolate.jpg" alt="">
+                    <div class="precio">
+                        <p><strong>$2.500</strong></p>
+                    </div>
                     <p>Chocolate</p>
                     <button class="comprar-btn">Comprar</button>
-                    <button class="editar"> <a href="/src/views/listadoHelados.ejs"></a> Editar</button>
+                    <button class="editar">
+                        <a href="/edit/<%= results.id %>">Editar</a>
+                    </button>
+                    <button class="editar">
+                        <a href="/delete/<%= results.id %>">Eliminar</a>
+                    </button>
+                </article>
+    
         </div>
-        </article>
+        
 
         <div class="caja-hija">
             <article>
-                <img src="/public/images/crema-cookie.jpg" alt="">
+                <img src="../../images/crema-cookie.jpg" alt="">
                 <div class="precio">  <p><strong>$2.000</strong> </div>
                 <p>Crema Cookie</p>
                 <button class="comprar-btn">Comprar</button>
@@ -72,7 +80,7 @@
         </div>
         <div class="caja-hija">
             <article>
-                <img src="/public/images/dulcedeleche-granizado.jpg" alt="">
+                <img src="../../images/dulcedeleche-granizado.jpg" alt="">
                 <div class="precio"> <p><strong>$2.500</strong> </div>
                 <p>Dulce de leche granizado</p>
                 <button class="comprar-btn">Comprar</button>
@@ -82,7 +90,7 @@
 
         <div class="caja-hija">
             <article>
-                <img src="/public/images/tiramisu.jpg" alt="">
+                <img src="../../images/tiramisu.jpg" alt="">
                 <div class="precio"> <p><strong>$2.500</strong> </div>
                 <p>Tiramisu</p>
                 <button class="comprar-btn">Comprar</button>
@@ -91,7 +99,7 @@
         </div>
         <div class="caja-hija">
             <article>
-                <img src="/public/images/marroc.jpg" alt="">
+                <img src="../../images/marroc.jpg" alt="">
                 <div class="precio"> <p><strong>$2.500</strong> </div>
                 <p>Marroc</p>
                 <button class="comprar-btn">Comprar</button>
@@ -102,48 +110,53 @@
         <div class="caja-hija">
             <article>
                 
-                <img src="/public/images/cucurucho.jpg" alt="">
+                <img src="../../images/cucurucho.jpg" alt="">
                 <div class="precio"> <p><strong>$2.500</strong> </div>
                 <p>Cucuruchos</p>
                 <button class="comprar-btn">Comprar</button>
                 <button class="comprar-btn">Editar</button>
             </article>
         </div>
+        <% var defaultImage = "../../images/default.jpg"; %>
+        <% var chunkSize = 1; // Define el tamaño del grupo de helados por div %>
+        <% var heladosCount = results.length; %>
+<% var chunksCount = Math.ceil(heladosCount / chunkSize); %>
+<% for (var i = 0; i < chunksCount; i++) { %>
+    <div class="caja-hija">
+        <% for (var j = i * chunkSize; j < (i + 1) * chunkSize && j < heladosCount; j++) { %>
+            <% var helado = results[j]; %>
+            <img src="<%= helado.imagen || defaultImage %>" alt="<%= helado.helado %>" class="img-responsive">
+            <h4><%= helado.helado %></h4>
 
+            <p>Stock: <%= helado.stock %></p>
+    
 
-        <% var defaultImage = "/public/images/default.jpg"; %>
-        <% var chunkSize = 1; // Define el tamaño del grupo de productos por div %>
-        <% var productosCount = productos.length; %>
-        <% var chunksCount = Math.ceil(productosCount / chunkSize); %>
-        <% for (var i = 0; i < chunksCount; i++) { %>
-            <div class="caja-hija">
-                <% var startIndex = i * chunkSize; %>
-                <% var endIndex = Math.min(startIndex + chunkSize, productosCount); %>
-                <% for (var j = startIndex; j < endIndex; j++) { %>
-                    <% var producto = productos[j]; %>
-                    <article class="producto">
-                        <img src="<%= producto.imagen ? '/public/images/' + producto.imagen : defaultImage %>" alt="<%= producto.nombre %>">
                         <div class="precio">
-                            <p><strong>$<%= producto.precio %></strong></p>
-                            <% if (producto.descuento) { %>
+                            <p><strong>$<%= helado.precio %></strong></p>
+                            <% if (helado.descuento) { %>
                                 <div class="descuento">
-                                    <span><%= producto.descuento %> OFF</span>
+                                    <span><%= helado.descuento %> OFF</span>
                                 </div>
                             <% } %>
                         </div>
-                        <p><%= producto.nombre %></p>
+                        <p><%= helado.nombre %></p>
                         <button class="comprar-btn">Comprar</button>
-
-                        <button><a href="/editProduct">Editar</a></button>
+                        <button class="editar">
+                            <a href="/edit/<%= results.id %>">Editar</a>
+                        </button>
+                        <button class="editar">
+                            <a href="/delete/<%= results.id %>">Eliminar</a>
+                        </button>
                     </article>
-                <% } %>
             </div>
-        <% } %>
-        
+            
+            <% } %>
+    
+<% } %>
     </section>
   </div>
 
-  <script src="/public/script.js"></script>
+  <script src="../../public/script.js"></script>
   <footer> <div class="copy"><p>&copy;1999-2023 HeladosLibres S.R.L.</p></div>
   </footer>
 </body>
